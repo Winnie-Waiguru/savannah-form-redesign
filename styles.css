@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  marging: 0;
+  box-sizing: border-box;
+}
+
+body,
+form,
+.container {
+  display: flex;
+}
+
+body {
+  background-image: linear-gradient(
+    to bottom,
+    #0a1d37 0%,
+    #142c61 50%,
+    #1e3a8a 100%
+  );
+  background-attachment: fixed;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+a {
+  color: #00c2fc;
+  font-weight: bold;
+}
+
+form {
+  flex-direction: column;
+}
+
+#email,
+#password,
+form > button {
+  width: 400px;
+  height: 56px;
+  border-radius: 10px;
+  border: none;
+}
+
+form > div {
+  margin-top: 12px;
+}
+
+.container {
+  position: relative;
+  width: 640px;
+  height: 600px;
+  top: 10;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px); /* For Safari support */
+  border-radius: 30px;
+  box-shadow: inset 1px 0 2px 2px rgba(255, 255, 255, 0.3);
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.container::before,
+.container:after {
+  content: "";
+  position: absolute;
+  width: 224px;
+  height: 224px;
+  border-radius: 100%;
+  z-index: 0;
+}
+
+.container::before {
+  top: -100px;
+  left: -164px;
+  background: #3b82f6;
+  filter: blur(36px);
+}
+
+.container::after {
+  bottom: -96px;
+  right: -132px;
+  background: #008080;
+  filter: blur(56px);
+}
