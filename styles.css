@@ -6,7 +6,8 @@
 
 body,
 form,
-.container {
+.container,
+.socials {
   display: flex;
 }
 
@@ -39,17 +40,50 @@ form {
   flex-direction: column;
 }
 
+.form-label {
+  margin-left: 2px;
+}
+
 #email,
 #password,
-form > button {
+form > button,
+.socials {
   width: 400px;
   height: 56px;
   border-radius: 10px;
-  border: none;
 }
 
 form > div {
-  margin-top: 12px;
+  margin: 12px 0px 8px 0px;
+}
+
+input {
+  border: 1px solid #ffffff;
+  padding: 0px 10px;
+}
+
+/* Only apply hover effect when NOT focused */
+input:not(:focus):hover {
+  background-color: #cbd5e1;
+  border-color: #cbd5e1;
+}
+
+input:focus {
+  outline: none;
+  border-color: #00c2fc;
+}
+
+button {
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  margin: 15px 0px;
+  font-weight: bold;
+  background-color: #00c2fc;
+}
+
+button:hover {
+  background-color: #008080;
 }
 
 .container {
@@ -66,6 +100,7 @@ form > div {
   align-items: center;
   flex-direction: column;
   z-index: 10;
+  font-weight: 300;
 }
 
 .container::before,
@@ -90,4 +125,49 @@ form > div {
   right: -132px;
   background: #008080;
   filter: blur(56px);
+}
+
+.rem-div > input {
+  width: 16px;
+  height: 16px;
+}
+
+.rem-div > label {
+  color: #a7aaae;
+}
+
+.rem-div > span {
+  float: right;
+}
+
+.divider {
+  margin-bottom: 15px;
+}
+
+.line {
+  display: inline-block;
+  border: 1px solid #ffffff;
+  width: 184px;
+  opacity: 0.2;
+}
+
+.socials {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.socials > img {
+  width: 28px;
+  height: 28px;
+  transition: all 0.3s ease;
+}
+
+.socials > img:hover {
+  width: 34px;
+  height: 34px;
+}
+
+.help-text {
+  align-self: flex-start;
+  margin-left: 120px;
 }
