@@ -127,12 +127,73 @@ button:hover {
   filter: blur(56px);
 }
 
-.rem-div > input {
-  width: 16px;
-  height: 16px;
+.rem-div {
+  display: flex;
+  height: 32px;
+  align-items: center;
+  justify-content: space-between;
+}
+/* 
+.check > input {
+  position: relative;
+  width: 0;
+  height: 0;
+  cursor: pointer;
 }
 
-.rem-div > label {
+.check > .custom-check {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+} */
+
+.custom-checkbox {
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+.custom-checkbox [type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  cursor: pointer;
+}
+
+.custom-checkbox span {
+  position: relative;
+  padding-left: 24px;
+  user-select: none;
+}
+
+.custom-checkbox span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.custom-checkbox input:checked + span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-image: url("./images/checkmark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.custom-checkbox > label {
   color: #a7aaae;
 }
 
