@@ -19,9 +19,9 @@ body {
     #1e3a8a 100%
   );
   background-attachment: fixed;
+  height: 100vh;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
@@ -133,20 +133,6 @@ button:hover {
   align-items: center;
   justify-content: space-between;
 }
-/* 
-.check > input {
-  position: relative;
-  width: 0;
-  height: 0;
-  cursor: pointer;
-}
-
-.check > .custom-check {
-  width: 36px;
-  height: 36px;
-  border: 1px solid #ffffff;
-  border-radius: 5px;
-} */
 
 .custom-checkbox {
   position: relative;
@@ -231,4 +217,33 @@ button:hover {
 .help-text {
   align-self: flex-start;
   margin-left: 120px;
+}
+
+@media (max-width: 480px) {
+  #email,
+  #password,
+  form > button,
+  .socials {
+    width: 312px;
+  }
+
+  .container {
+    width: 360px;
+  }
+
+  .line {
+    width: 136px;
+  }
+
+  .help-text {
+    margin-left: 24px;
+  }
+
+  .container::before {
+    top: -110px;
+  }
+
+  .container::after {
+    bottom: -140px;
+  }
 }
