@@ -16,16 +16,27 @@
   </head>
   <body>
     <div class="container">
-      <form action="">
+      <div class="success" id="successMessage">
+        You have successfully logged in!
+      </div>
+      <form id="logInForm" method="post">
         <h1>Welcome!</h1>
         <p><a href="#">Create an account</a> or log in to get started</p>
         <div>
           <label for="email" class="form-label">Email</label><br />
-          <input type="email" name="email" id="email" />
+          <input type="email" name="email" id="email" required />
+          <span class="error" id="emailError"></span>
         </div>
         <div>
           <label for="password" class="form-label">Password</label><br />
-          <input type="password" name="password" id="password" />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            required
+            minlength="8"
+          />
+          <span class="error" id="passwordError"></span>
         </div>
         <div class="rem-div">
           <label class="custom-checkbox">

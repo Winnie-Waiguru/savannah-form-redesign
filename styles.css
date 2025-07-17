@@ -40,6 +40,15 @@ form {
   flex-direction: column;
 }
 
+.success {
+  display: none;
+  background: green;
+  color: #ffffff;
+  width: 80%;
+  padding: 2px;
+  text-align: center;
+}
+
 .form-label {
   margin-left: 2px;
 }
@@ -88,6 +97,7 @@ button:hover {
 
 .container {
   position: relative;
+  padding: 2px;
   width: 640px;
   height: 600px;
   top: 10;
